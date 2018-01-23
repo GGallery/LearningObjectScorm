@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FLVCoreCuePoints xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1">
+	<CuePoint>
+		<Time>0</Time>
+		<Name>Agenda</Name>
+	</CuePoint>
+	<CuePoint>
+		<Time>59</Time>
+		<Name>LEZIONE 1 - Indice</Name>
+	</CuePoint> 
+	<CuePoint>
+		<Time>65</Time>
+		<Name>A - Il Regolamento 2016/679 - 1</Name>
+	</CuePoint>
+	<CuePoint>
+		<Time>133</Time>
+		<Name>A - Il Regolamento 2016/679 - 2</Name>
+	</CuePoint>
+	<CuePoint>
+		<Time>213</Time>
+		<Name>A - Il Regolamento 2016/679 - 3</Name>
+	</CuePoint>
+	<CuePoint>
+		<Time>378</Time>
+		<Name>B - Finalità, natura, ambito di applicazione e tempi di adeguamento - 1</Name>
+	</CuePoint>
+	<CuePoint>
+		<Time>498</Time>
+		<Name>B - Finalità, natura, ambito di applicazione e tempi di adeguamento - 2</Name>
+	</CuePoint> 
+	<CuePoint>
+		<Time>531</Time>
+		<Name>B - Finalità, natura, ambito di applicazione e tempi di adeguamento - 3</Name>
+	</CuePoint>
+	<CuePoint>
+		<Time>601</Time>
+		<Name>B - Finalità, natura, ambito di applicazione e tempi di adeguamento - 4</Name>
+	</CuePoint>
+	<CuePoint>
+		<Time>630</Time>
+		<Name>B - Finalità, natura, ambito di applicazione e tempi di adeguamento - 5</Name>
+	</CuePoint>
+	<CuePoint>
+		<Time>698</Time>
+		<Name>B - Finalità, natura, ambito di applicazione e tempi di adeguamento - 6</Name>
+	</CuePoint>
+	<CuePoint>
+		<Time>748</Time>
+		<Name>B - Finalità, natura, ambito di applicazione e tempi di adeguamento - 7</Name>
+	</CuePoint> 
+
+
+</FLVCoreCuePoints>

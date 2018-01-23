@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Il nuovo Regolamento europeo sulla protezione dei dati: cosa cambia per le banche
+</title>
+
+        <script src="include/js/jquery.js"></script>
+        <script src="include/js/mediaelement-and-player.min.js"></script>
+        <script src="include/js/bootstrap.min.js"></script>
+
+        <script src="include/js/custom.js" type="text/javascript"></script>
+
+        <link rel="stylesheet" href="include/css/mediaelementplayer.min.css" />
+        <link rel="stylesheet" href="include/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="include/css/custom.css" />
+        <link rel="stylesheet" href="include/css/VerticalTimeline/styles.css" />
+
+        <style type="text/css">
+
+            .videocontent {
+                width:auto;
+                height: auto;		
+                max-width: 340px;
+                margin: 0 auto;
+            }
+
+            .row{
+                margin-left: 0px !important;
+            }
+
+            .mejs-container {
+                width: 100% !important;
+                height: auto !important;
+                padding-top: 57%;
+                height: 
+            }
+            .mejs-overlay, .mejs-poster {
+                width: 100% !important;
+                height: 100% !important;
+            }
+            .mejs-mediaelement video {
+                position: absolute;
+                top: 0; left: 0; right: 0; bottom: 0;
+                width: 100% !important;
+                height: 100% !important;
+            }
+
+            .mejs-slides-player {
+                width: 1120px;
+                margin: 0 auto;
+            }
+            .mejs-slides-player-video {
+                width: 640px;
+                height: 360px;
+                float: left;
+            }
+
+            .mejs-slides-player-slides {
+                height: 360px;
+                /*width: 100% !important;*/
+                position: relative;
+                float: right;
+            }	
+
+            .mejs-slides-player-slides img {
+                /*width: 100% !important;*/	
+                /*height: auto;*/
+                position: static;
+                top: 0;
+                left: 0;
+
+                /*                max-height: calc(100vh - 20px) !important; 
+                                max-height: -moz-calc(100vh - 20px) !important;
+                                max-height: -webkit-calc(100vh - 20px) !important;*/
+
+
+                max-height: 100% !important;
+                max-width:   100% !important;
+                min-height: 200px;
+
+
+            }
+
+
+            .img-thumbnail{
+                /*max-height: calc(100vh - 255px) !important;
+                height: auto !important; */
+                height: calc(100vh - 160px) !important; 
+                height: -moz-calc(100vh - 160px) !important;
+                height: -webkit-calc(100vh - 160px) !important;
+
+                /*                max-height: calc(100vh - 160px) !important; 
+                                max-height: -moz-calc(100vh - 160px) !important;
+                                max-height: -webkit-calc(100vh - 160px) !important;*/
+
+                /*              background-color: #BAC9D0;
+                                border: 1px solid #BAC9D0;*/
+
+                min-height: 200px;
+            } 
+
+}
+        </style>
+
+
+    </head>
+    <body>
+
+        <div id="header">
+            <div class="row">
+
+                <div class="col-xs-3  col-md-3   col-lg-2">
+                    <img src="include/css/logo.png" style="padding-top: 10px;" class="img-responsive">
+                </div>          
+
+
+                <div class="  col-xs-1 col-md-1 col-lg-3"> </div> 
+
+                <div class=" col-xs-1 col-md-1 col-lg-1 ">
+                    <div  
+                        id="btn_normativa"
+                        data-toggle="modal" 
+                        data-target="#panel_normativa">
+                        <img src="include/css/normativa.png">
+
+                    </div>
+                </div>
+
+                <div class=" col-xs-1 col-md-1 col-lg-1 ">
+                    <div  
+                        id="btn_orientamento"
+                        data-toggle="modal" 
+                        data-target="#panel_orientamento">
+                        <img src="include/css/orientamento.png">
+
+                    </div>
+                </div>
+
+
+
+                <div class=" col-xs-1 col-md-1 col-lg-1 ">
+                    <a href="aiuto.pdf" id="scaricaglossario" target="_blank">
+                        <img class="" src="include/css/aiuto.png">
+                    </a>
+                </div>
+<!--
+                <div  class="col-xs-1 col-md-1 col-lg-1"  >
+                  <a href="Obiettivi.pdf" id="scaricaobiettivi" target="_blank">
+                        <img class="" src="include/css/obiettivi.png">
+                    </a>
+                </div>
+-->
+                <div id="bloxslider" class="  col-xs-1 col-md-1 col-lg-1">
+                    <img id="layout_a" style="float:right;" class="layoutico" src="include/css/layout_a.png"/>
+                </div>
+                
+                <div id="bloxslider" class="  col-xs-1 col-md-1 col-lg-1">
+                    <img id="layout_c" class="layoutico" src="include/css/layout_c.png"/>
+                </div>
+
+                 <div class="col-xs-3 col-md-3 col-lg-2">
+                    <img src="include/css/logo_ABIF.png" style="padding-top: -10px;" class="img-responsive">
+                </div>     
+
+            </div>
+        </div>
+
+
+        <!-- *****************  FINE HEADER ***************** -->
+
+
+
+
+        <img id="mostracoupon" alt="navigazione" src="include/css/tab_navigazione.png"/>
+        <div id="box_jumper" class="box_jumper"></div>
+
+        <div class="container-video">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>LEZIONE 1 - Il quadro normativo</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div id="boxvideo" class="col-xs-6">
+                    <video class="img-thumbnail" style="width:100%; height:100%;" height="100%"  width="100%" controls="controls" preload="auto" >
+                        <source type="video/mp4" src="video.mp4" />
+                        <source type="video/webm" src="video.webm" />
+                        <source type="video/ogg" src="video.ogv" /> 
+                        <track kind="slides" src="vtt_slide.vtt" />			
+                    </video>
+                </div> 
+                <div id="boxslide" class="col-xs-6">
+                    <div class="mejs-slides-player-slides img-thumbnail"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- *****************  FINESTRE MODALI ***************** -->
+
+        <div id= "panel_orientamento" class="modal fade"  tabindex="-1" backdrop="false" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-orientamento">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h3 class="modal-title" id="myModalLabel" style="font-family: AGENCYR; font-size: 24pt;">Orientamento e crediti</h3>
+                    </div>
+
+
+<div class="modal-body" id="panel_schedacaso_body">
+ 
+    <h3 style="color: #1b3765">Destinatari</h3>
+  
+ 
+
+
+<p>Neoassunti e addetti alle attività commerciali, incaricati del trattamento dei dati personali e tutto il personale interessato, anche indirettamente, al trattamento dei dati personali, specialisti dell'area risorse umane e organizzazione.</p>
+
+
+
+                   
+                      
+
+
+                        <h3 style="color: #1b3765">Indice</h3>
+<h3>Il nuovo Regolamento europeo sulla protezione dei dati: cosa cambia per le banche</h3>
+<h4>Il nuovo quadro normativo relativo alla tutela dei dati personali</h4>
+<h4>Il quadro normativo</h4>
+<p>
+    Il Regolamento 2016/79<br/>
+    Finalit&agrave;, natura, ambito di applicazione e tempi di adeguamento
+</p>
+
+<h4>Dal Codice privacy al nuovo Regolamento: adempimenti fondamentali per la banca</h4>
+<p>
+    Definizioni: conferme e novit&agrave;<br/>
+    Principi generali per il trattamento dei dati personali<br/>
+    Presupposti di liceit&agrave; del trattamento: bilanciamento di interessi<br/>
+    Presupposti di liceit&agrave; del trattamento: il consenso dell'interessato<br/>
+    Cautele per i dati di minori, per i dati sensibili e penali <br/>
+    Informazioni, comunicazioni e modalit&agrave; trasparenti per l'esercizio dei diritti dell'interessato<br/>
+    Aggiornamento delle informative fornite ai clienti<br/>
+    Rafforzamento dei diritti degli interessati <br/>
+    Condizioni e garanzie specifiche previste per i trasferimenti di dati all'estero (extra Ue) 
+</p>
+
+<h4>I principali ruoli e responsabilità soggettive: la nuova figura del Data Protection Officer</h4>
+<p>
+    Titolare del trattamento: obblighi e responsabilit&agrave;<br/>
+    Il responsabile del trattamento nel GDPR <br/>
+    Responsabile della protezione dei dati: requisiti e compiti<br/>
+    Persone autorizzate al trattamento: incaricati e ADS
+</p>
+
+<h4>Le novit&agrave; per la banca nella gestione delle misure organizzative, tecniche e di sicurezza dei dati</h4>
+<p>
+Il principio di accountability e l'approccio basato sul rischio<br/>
+Privacy by design e by default<br/>
+I registri delle attività di trattamento<br/>
+La sicurezza del trattamento dei dati<br/>
+La notificazione delle violazioni dei dati: data breach<br/>
+La valutazione d'impatto sulla protezione dei dati <br/>
+Codici di condotta e certificazioni privacy <br/>
+Autorit&agrave; di controllo e Comitato europeo protezione dati
+</p>
+
+<h4>Le nuove previsioni in tema di reclami, sanzioni e responsabilit&agrave;</h4>
+<p>
+    I reclami all’Autorit&agrave; di controllo, ricorsi e azioni risarcitorie<br/>
+    Il rafforzamento delle sanzioni pecuniarie <br/>
+    La revisione delle sanzioni penali
+</p>
+
+<h4>Test</h4>
+
+
+
+<h3 style="color: #1b3765">Durata:</h3>
+<p>Il corso ha una durata stimata di 2 ore e 30 minuti.</p>
+
+
+  
+
+
+
+    <h3 style="color: #1b3765">Crediti</h3>
+  
+ 
+
+<h4>Project management e progettazione didattica</h4>
+<p>Martina Ceccotti, Ufficio Produzione E-learning e Knowledge Management, ABIFORMAZIONE</p>
+<h4>Selezione e validazione dei contenuti</h4>
+<p>Avv. Giovanni Guerra<br/>
+Giovanni Staiano, Ufficio Affari Legali, ABI<br/>
+Francesca Santilli, Ufficio Affari Legali, ABI</p>
+
+</div>
+
+         
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Chiudi</button> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id= "panel_normativa" class="modal fade"  tabindex="-1" backdrop="false" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-normativa">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h3 class="modal-title" id="myModalLabel" style="font-family: AGENCYR; font-size: 24pt;"
+                        >Normativa</h3>
+                    </div>
+                    <div class="modal-body" id="panel_normativa_body">
+                        <ul>
+                            <li><a href="normativa/Dir58.pdf" target="_blank">Direttiva 2002/58/CE</a></li>
+                        <li><a href="normativa/Privacy_shield.pdf" target="_blank">Decisione di esecuzione (UE) 2016/1250 della Commissione del 12 luglio 2016 - Privacy Shield</a></li>
+                        <li><a href="normativa/Proposta_Reg_eprivacy.pdf" target="_blank">Regolamento del Parlamento Europeo e del Consiglio relativo al rispetto della vita privata e alla tutela dei dati personali nelle comunicazioni elettroniche</a></li>
+                        <li><a href="normativa/Regolamento_679.pdf" target="_blank">Regolamento (UE) 2016/679 del Parlamento Europeo e del Consiglio del 27 aprile 2016</a></li>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Chiudi</button> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id= "panel_normativa" class="modal fade"  tabindex="-1" backdrop="false" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-normativa">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Orientamento e crediti</h4>
+                    </div>
+                    <div class="modal-body" id="panel_normativa_body">
+                        <a href="normativa/Dir58.pdf">Direttiva 2002/58/CE</a><br/>
+                        <a href="normativa/Privacy_shield.pdf">Decisione di esecuzione (UE) 2016/1250 della Commissione del 12 luglio 2016 - Privacy Shield</a><br/>
+                        <a href="normativa/Proposta_Reg-eprivacy.pdf">Regolamento del Parlamento Europeo e del Consiglio relativo al rispetto della vita privata e alla tutela dei dati personali nelle comunicazioni elettroniche</a><br/>
+                        <a href="normativa/Regolamento_679.pdf">Regolamento (UE) 2016/679 del Parlamento Europeo e del Consiglio del 27 aprile 2016</a><br/>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Chiudi</button> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- *****************  FINE FINESTRE MODALI ***************** -->
+
+
+
+    </body>
+</html>

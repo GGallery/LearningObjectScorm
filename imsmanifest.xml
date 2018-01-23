@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload version 2.5.5 SCORM 1.2 Content Package document-->
+<!--Spawned from the Reload Content Package Generator - http://www.reload.ac.uk-->
+<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" identifier="MANIFEST-0F5D861FC48C22881E417F1FBFE5C6BF" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <organizations default="ORG-9CFCC4D798868819856ED4BF73BD3124">
+    <organization identifier="ORG-9CFCC4D798868819856ED4BF73BD3124" structure="hierarchical">
+      <title>LEZIONE 1 - Il quadro normativo</title>
+      <item identifier="ITEM-562296B78B0BAC7DE74D869EC21D243A" identifierref="RES-1394F3114CAB9E9178244525105AC295" isvisible="true">
+        <title>Risorsa</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-1394F3114CAB9E9178244525105AC295" type="webcontent" href="files/index.html" adlcp:scormtype="sco">
+      <file href="files/index.html" />
+    </resource>
+  </resources>
+</manifest>
+

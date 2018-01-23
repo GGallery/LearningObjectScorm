@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FLVCoreCuePoints xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1">
+    <Params> 
+        <!--
+        Modalità di accesso
+        impostare come segue
+        0 -> Free   : Verrà settato "completed" solo dopo aver raggiunto la fine del video ma sarà comunque possibile navigare il contenuto.
+        1 -> Locked : Verrà settato "completed" solo dopo aver raggiunto la fine del video e non sarà possibile navigare il contenuto fino ad allora. 
+        -->
+        <accessmode>1</accessmode>
+    
+
+        <!--
+        Anticipo fine video
+        Valore che esprime il num di secondi con il quale il video viene considerato completato prima di arrivare alla fine del video.
+        Predefinito : 10
+        -->
+        <anticipofine>12</anticipofine>
+                
+        <!--
+        Pulsante normativa
+        Parametro che indica la presenza o meno del pulsante normativa 
+        0 -> Nascosto   : Pulsante non visibile
+        1 -> Visibile   : Pulsante visibile linkato al file files/normativa.html
+        -->
+        <normativa>1</normativa>
+
+        <!--
+        Scarica Slide
+        Parametro che indica la presenza del file slide da scaricare 
+        0 -> No slide   : File non presente
+        1 -> Slide      : File slide.pdf presente nella root del contenuto.
+        -->
+        <pdfslide>0</pdfslide>
+ 
+ 
+ 
+    </Params>
+</FLVCoreCuePoints>
