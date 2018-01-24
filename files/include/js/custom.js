@@ -93,6 +93,15 @@ jQuery(document).ready(function ($) {
         $(this).popover('hide');
     });
 
+    $('#close').on('click', function() {
+        console.log('close');
+        ScormProcessFinish();
+        parent.window.close();
+    });
+
+
+
+
     var slide = ["col-sm-3", "col-sm-4", "col-sm-5", "col-sm-6", "col-sm-7", "col-sm-8", "col-sm-9"];
     var video = ["col-sm-9", "col-sm-8", "col-sm-7", "col-sm-6", "col-sm-5", "col-sm-4", "col-sm-3"];
 
@@ -505,7 +514,7 @@ function fschedecaso(tempo_schedecaso) {
         // console.log("scheda selezionata " + i + "-" + parseInt(schedecaso[i]['tstart']) + schedecaso[i]["titolo"]);
 
         if (i < schedecaso.length && i != schedecaso_attuale) {
-            console.log("cambio schedecaso -> AJAX per set position");
+            console.log("cambio schedecaso -> AJAX per set position" + schedecaso.length);
             schedecaso_attuale = i;
             // cancello eventuali jumper azzurri
             pathschedacaso = 'schedecaso/' + schedecaso[i]["titolo"];
@@ -527,11 +536,6 @@ function fschedecaso(tempo_schedecaso) {
     }
 }
 
-function close(){
-    console.log('close');
-    window.opener = self;
-    window.close();
-}
 
 // *****************************************************************************
 // 
