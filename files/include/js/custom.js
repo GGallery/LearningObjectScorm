@@ -85,7 +85,6 @@ jQuery(document).ready(function ($) {
         }
     });
 
-
     $('#BtSchedaCaso').popover({
         content: "<b>Scheda caso aggiornata</b><br> clicca sul pulsante per visualizzarla e poi prosegui nella visione del video.",
         html: true
@@ -100,7 +99,12 @@ jQuery(document).ready(function ($) {
     });
 
 
-
+    $("#ripartidainizio").on('click',function(event){
+        console.log('ripartidainizio');
+        player.setCurrentTime(0);
+        sliding(0);
+        $('#panel_ripresa_stato').modal('toggle');
+    });
 
     var slide = ["col-sm-3", "col-sm-4", "col-sm-5", "col-sm-6", "col-sm-7", "col-sm-8", "col-sm-9"];
     var video = ["col-sm-9", "col-sm-8", "col-sm-7", "col-sm-6", "col-sm-5", "col-sm-4", "col-sm-3"];
@@ -132,6 +136,7 @@ function load_Params() {
         success: parse_Params
     });
 }
+
 function parse_Params(xml) {
     $(xml).find("Params").each(function ()
     {
@@ -160,6 +165,7 @@ function load_Cue_Points() {
         success: parse_Cue_Points
     });
 }
+
 function parse_Cue_Points(xml) {
     var id = 0;
     $(xml).find("CuePoint").each(function ()
@@ -250,12 +256,14 @@ function startup() {
             }, false);
         },
         error: function () {
-            console.log('Errore');
+            console.log('Errore player');
         }
     });
 }
 
 function sliding(tempo) {
+
+    console.log("sld -> "+tempo);
 
     if(suspend_data.bookmark < parseInt(tempo))
         suspend_data.bookmark = parseInt(tempo);
@@ -304,8 +312,6 @@ function timeFormat(msDurata) {
 
     return ore + ":" + minuti + ":" + secondi ;
 }
-
-
 
 function findAPI(win) {
     // Check to see if the window (win) contains the API
@@ -396,10 +402,14 @@ function ScormProcessInitialize() {
     }
 
     load = API.LMSGetValue("cmi.core.lesson_status");
-    if (load == 'completed')
+    if (load == 'completed') {
+        console.log('completed');
         lesson_status = true;
+        $('#panel_ripresa_stato').modal('show');
+    }
 
-    old_tempo =  suspend_data.bookmark;
+
+    old_tempo = suspend_data.bookmark;
     time = suspend_data.bookmark;
     suspend_data.attempt++;
 
@@ -408,7 +418,6 @@ function ScormProcessInitialize() {
     load_Cue_Points();
     load_Params();
     load_SchedaCaso();
-
 
 }
 
@@ -453,7 +462,6 @@ function ScormProcessFinish() {
     console.log('finished');
 }
 
-
 function ScormUpdate() {
 
     var result;
@@ -496,7 +504,6 @@ function ScormUpdate() {
     console.log('scormupdate');
 }
 
-
 function fschedecaso(tempo_schedecaso) {
 
     if (old_tempo_schedecaso != tempo_schedecaso && typeof (schedecaso.length) != 'undefined') {
@@ -513,7 +520,7 @@ function fschedecaso(tempo_schedecaso) {
 
         // console.log("scheda selezionata " + i + "-" + parseInt(schedecaso[i]['tstart']) + schedecaso[i]["titolo"]);
 
-        if (i < schedecaso.length && i != schedecaso_attuale) {
+        if (i < schedecaso.length && i != schedecaso_attuale && schedecaso.length > 0) {
             console.log("cambio schedecaso -> AJAX per set position" + schedecaso.length);
             schedecaso_attuale = i;
             // cancello eventuali jumper azzurri
@@ -535,6 +542,7 @@ function fschedecaso(tempo_schedecaso) {
         }
     }
 }
+
 
 
 // *****************************************************************************

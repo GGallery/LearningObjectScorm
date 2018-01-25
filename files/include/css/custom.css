@@ -197,6 +197,9 @@ font-family:  AGENCYR, arial;
     cursor: pointer;
 }
 
+#close {
+    cursor: pointer;
+}
 
 /*QUESTO SI PUO' TOGLIERE'*/
 /*FULL SCREEN PER CONTENUTO SCORM*/
@@ -220,3 +223,4 @@ font-family:  AGENCYR, arial;
 .modal-dialog{
     top : 70px !important;
 }
+

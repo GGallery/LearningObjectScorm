@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<FLVCoreCuePoints xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1">
-	<CuePoint>
-		<Time>0</Time>
-		<Name>SchedaCaso_M1UD1_3.html</Name>
-		<Dialog>Prosegui nella visione per aggiornare la scheda caso</Dialog>
-	</CuePoint>
-</FLVCoreCuePoints>
+<CuePoints >
+	<!--<CuePoint>-->
+		<!--<Time>0</Time>-->
+		<!--<Name>SchedaCaso_M1UD1_3.html</Name>-->
+		<!--<Dialog>Prosegui nella visione per aggiornare la scheda caso</Dialog>-->
+	<!--</CuePoint>-->
+</CuePoints>
