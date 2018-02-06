@@ -53,7 +53,8 @@ var lesson_status = false;
 
 jQuery(document).ready(function ($) {
 
-    window.onload = ScormProcessInitialize;
+    console.log("ready");
+    ScormProcessInitialize();
     window.onunload = ScormProcessFinish;
     window.onbeforeunload = ScormProcessFinish;
 
@@ -97,7 +98,6 @@ jQuery(document).ready(function ($) {
         ScormProcessFinish();
         parent.window.close();
     });
-
 
     $("#ripartidainizio").on('click',function(event){
         console.log('ripartidainizio');
@@ -263,12 +263,11 @@ function startup() {
 
 function sliding(tempo) {
 
-    console.log("sld -> "+tempo);
-
     if(suspend_data.bookmark < parseInt(tempo))
         suspend_data.bookmark = parseInt(tempo);
 
     if (tempo > durata - anticipofine) {
+        console.log("cmi.core.lesson_status->completed");
         API.LMSSetValue("cmi.core.lesson_status", "completed");
         lesson_status = true;
     }
@@ -359,10 +358,12 @@ function getAPI() {
         // Alert the user that the API Adapter could not be found
         alert("Unable to find an API adapter");
     }
+
     return theAPI;
 }
 
 function ScormProcessInitialize() {
+
     var result;
 
     API = getAPI();
@@ -396,7 +397,7 @@ function ScormProcessInitialize() {
         console.log("Attempt [inizializzato]: " + suspend_data.attempt)
         console.log("Bookmark [inizializzato]: " + suspend_data.bookmark)
     } else{
-        suspend_data = JSON.parse(load);
+        suspend_data = JSON.parse(atob(load));
         console.log("Attempt [letto scorm]: " + suspend_data.attempt)
         console.log("Bookmark [letto scorm]: " + suspend_data.bookmark)
     }
@@ -427,7 +428,9 @@ function ScormProcessFinish() {
 
     //Imposto il suspend_data
     suspend_data.attempt++;
-    var json_suspend_data = JSON.stringify(suspend_data);
+
+    var json_suspend_data = btoa(JSON.stringify(suspend_data));
+
     result = API.LMSSetValue("cmi.suspend_data", json_suspend_data);
     // console.log("Salvataggio suspend_data:"+result);
 
@@ -468,7 +471,11 @@ function ScormUpdate() {
 
     //Imposto il suspend_data
     // suspend_data.attempt++;
-    var json_suspend_data = JSON.stringify(suspend_data);
+
+    var json_suspend_data = btoa(JSON.stringify(suspend_data));
+
+    console.log("ASCI64: "+json_suspend_data);
+
     result = API.LMSSetValue("cmi.suspend_data", json_suspend_data);
     console.log("Salvataggio suspend_data:"+result);
 
