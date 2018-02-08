@@ -64,7 +64,7 @@ jQuery(document).ready(function ($) {
 
     $("#box_jumper").on('click', '.jumper', function () {
         var rel = jQuery(this).attr('rel');
-        if (lesson_status || accessmode == 0) {
+        if (lesson_status || accessmode == 0 || rel < suspend_data.bookmark ) {
             player.setCurrentTime(rel);
             sliding(time);
         } else {
